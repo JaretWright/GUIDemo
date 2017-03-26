@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 /**
@@ -25,6 +26,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML private ChoiceBox choiceBox;
     @FXML private Label choiceBoxLabel;
     
+    //These items are for the ComboBox example
+    @FXML private ComboBox comboBox;
+    @FXML private Label comboBoxLabel;
+    
+    
     /**
      * This will update the Label for the ChoiceBox
      */
@@ -32,6 +38,7 @@ public class FXMLDocumentController implements Initializable {
     {
         choiceBoxLabel.setText("My favourite fruit is:\n"+choiceBox.getValue().toString());
     }
+    
     
     /**
      * This is for the CheckBox example
@@ -52,6 +59,18 @@ public class FXMLDocumentController implements Initializable {
         this.pizzaOrderLabel.setText(order);
     }
             
+    
+    /**
+     * This will update the comboBoxLabel when the ComboBox is changed
+     */
+    public void comboBoxWasUpdated()
+    {
+        this.comboBoxLabel.setText("Course selected: \n" + comboBox.getValue().toString());
+    }
+    
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         pizzaOrderLabel.setText("");
@@ -63,6 +82,9 @@ public class FXMLDocumentController implements Initializable {
         choiceBox.getItems().addAll("oranges","pears","strawberries");
         choiceBox.setValue("apples");
         
+        //this items are for confirguring the ComboBox
+        comboBox.getItems().add("COMP1030");
+        comboBox.getItems().addAll("COMP1008","MGMT2003","MGMT2010");
     }    
     
 }
