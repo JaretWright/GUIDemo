@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="guidemo.FXMLDocumentController">
+   <children>
+      <HBox prefHeight="329.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="CheckBox Objects">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="pineappleCheckBox" mnemonicParsing="false" text="Pineapple" />
+                  <CheckBox fx:id="pepperoniCheckBox" mnemonicParsing="false" text="Pepperoni" />
+                  <CheckBox fx:id="baconCheckBox" mnemonicParsing="false" text="Bacon" />
+                  <Button mnemonicParsing="false" onAction="#pizzaOrderButtonPushed" text="Order Pizza" />
+                  <Label fx:id="pizzaOrderLabel" alignment="TOP_LEFT" prefHeight="113.0" prefWidth="199.0" text="Label" />
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="ChoiceBox Object">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" onAction="#choiceBoxButtonPushed" text="Favourite Fruit" />
+                  <Label fx:id="choiceBoxLabel" text="Label" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
