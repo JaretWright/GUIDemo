@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="guidemo.ExampleOfTableViewController">
+   <children>
+      <Label layoutX="49.0" layoutY="35.0" text="TableView Object">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="551.0" layoutY="516.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="17.0" prefWidth="211.0" text="Go Back to GUI Objects View" />
+   </children>
+</AnchorPane>

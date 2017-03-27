@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="guidemo.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guidemo.FXMLDocumentController">
    <children>
       <HBox prefHeight="329.0" prefWidth="800.0">
          <children>
@@ -77,12 +77,12 @@
                         <Font name="System Bold Italic" size="18.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="listView" prefHeight="250.0" prefWidth="121.0" />
+                  <ListView fx:id="listView" prefHeight="250.0" prefWidth="200.0" />
                </children>
             </VBox>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#listViewButtonPushed" text="Selected Gear -&gt;" />
+                  <Button mnemonicParsing="false" onAction="#listViewButtonPushed" prefWidth="200.0" text="Selected Gear -&gt;" />
                </children>
             </StackPane>
             <VBox prefHeight="200.0" prefWidth="200.0">
@@ -95,6 +95,11 @@
                   <TextArea fx:id="golfTextArea" prefHeight="250.0" prefWidth="200.0" />
                </children>
             </VBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="99.0" layoutY="205.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Go to Table View" />
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
    </children>
