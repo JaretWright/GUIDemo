@@ -2,6 +2,7 @@ package guidemo;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,7 +10,10 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
 
 /**
@@ -39,6 +43,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML private RadioButton cPlusPlusRadioButton;
     @FXML private Label radioButtonLabel;
     private ToggleGroup favLangToggleGroup;
+    
+    
+    //These items are for the ListView and TextArea example
+    @FXML private ListView listView;
+    @FXML private TextArea golfTextArea;
+    
     
     /**
      * This will update the Label for the ChoiceBox
@@ -98,8 +108,25 @@ public class FXMLDocumentController implements Initializable {
     }
     
     
+    /**
+     * This method will copy the Strings from the ListView and put them in the text area
+     */
+     public void listViewButtonPushed()
+     {
+        String textAreaString = "";
+        
+        ObservableList listOfItems = listView.getSelectionModel().getSelectedItems();
+        
+        for (Object item : listOfItems)
+        {
+            textAreaString += String.format("%s%n",(String) item);
+        }
+        
+        this.golfTextArea.setText(textAreaString);
+     }
     
-    
+     
+     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         pizzaOrderLabel.setText("");
@@ -123,6 +150,11 @@ public class FXMLDocumentController implements Initializable {
         this.cSharpRadioButton.setToggleGroup(favLangToggleGroup);
         this.phpRadioButton.setToggleGroup(favLangToggleGroup);
         this.javaRadioButton.setToggleGroup(favLangToggleGroup);
+        
+        //These items are for configuring the ListArea
+        listView.getItems().addAll("Golf Balls","Wedges","Irons","Tees","Driver","Putter");
+        listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        
     }    
     
 }
