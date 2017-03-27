@@ -49,6 +49,20 @@
                   <Label fx:id="comboBoxLabel" text="Label" />
                </children>
             </VBox>
+            <VBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="RadioButton Objects">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="phpRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="PHP" />
+                  <RadioButton fx:id="javaRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="Java" />
+                  <RadioButton fx:id="cSharpRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="C#" />
+                  <RadioButton fx:id="cPlusPlusRadioButton" mnemonicParsing="false" onAction="#radioButtonChanged" text="C++" />
+                  <Label fx:id="radioButtonLabel" text="Label" />
+               </children>
+            </VBox>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
