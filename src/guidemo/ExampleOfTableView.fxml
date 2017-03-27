@@ -16,5 +16,12 @@
          </font>
       </Label>
       <Button layoutX="551.0" layoutY="516.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="17.0" prefWidth="211.0" text="Go Back to GUI Objects View" />
+      <TableView fx:id="tableView" layoutX="49.0" layoutY="83.0" prefHeight="200.0" prefWidth="440.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="120.0" text="First Name" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="154.0" text="Last Name" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="91.0" text="Birthday" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
