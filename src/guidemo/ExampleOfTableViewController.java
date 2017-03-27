@@ -20,8 +20,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
 /**
@@ -37,7 +39,25 @@ public class ExampleOfTableViewController implements Initializable {
     @FXML private TableColumn<Person, String> lastNameColumn;
     @FXML private TableColumn<Person, LocalDate> birthdayColumn;
     
+    /**
+     * This method will allow the user to double click on a cell and update
+     * the first name of the person
+     */
+    public void changeFirstNameCellEvent(CellEditEvent edittedCell)
+    {
+        Person personSelected =  tableView.getSelectionModel().getSelectedItem();
+        personSelected.setFirstName(edittedCell.getNewValue().toString());
+    }
     
+       /**
+     * This method will allow the user to double click on a cell and update
+     * the first name of the person
+     */
+    public void changeLastNameCellEvent(CellEditEvent edittedCell)
+    {
+        Person personSelected =  tableView.getSelectionModel().getSelectedItem();
+        personSelected.setLastName(edittedCell.getNewValue().toString());
+    }
     
      /**
      * When this method is called, it will change the Scene to 
@@ -66,6 +86,12 @@ public class ExampleOfTableViewController implements Initializable {
         
         //load dummy data
         tableView.setItems(getPeople());
+        
+        //Update the table to allow for the first and last name fields
+        //to be editable
+        tableView.setEditable(true);
+        firstNameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        lastNameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
     }    
     
     
