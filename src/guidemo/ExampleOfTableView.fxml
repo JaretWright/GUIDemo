@@ -17,7 +17,7 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <TableView fx:id="tableView" prefHeight="250.0" prefWidth="290.0">
+            <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="250.0" prefWidth="290.0">
               <columns>
                 <TableColumn fx:id="firstNameColumn" onEditCommit="#changeFirstNameCellEvent" prefWidth="120.0" text="First Name" />
                 <TableColumn fx:id="lastNameColumn" onEditCommit="#changeLastNameCellEvent" prefWidth="154.0" text="Last Name" />
@@ -35,7 +35,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#newPersonButtonPushed" prefWidth="175.0" text="Add New Person" />
                   <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Person(s) " />
-                  <Button mnemonicParsing="false" onAction="#changeSceneToDetailedPersonView" text="Detailed Person View" />
+                  <Button fx:id="detailedPersonViewButton" mnemonicParsing="false" onAction="#changeSceneToDetailedPersonView" text="Detailed Person View" />
                </children>
             </HBox>
          </children>

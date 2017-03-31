@@ -163,6 +163,9 @@ public class FXMLDocumentController implements Initializable {
         //this items are for configuring the ComboBox
         comboBox.getItems().add("COMP1030");
         comboBox.getItems().addAll("COMP1008","MGMT2003","MGMT2010");
+        comboBox.setVisibleRowCount(3);
+        comboBox.setEditable(true);
+        comboBox.setPromptText("Choose Course");
         comboBoxLabel.setText("");
         
         //These items are for configuring the RadioButtons

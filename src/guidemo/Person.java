@@ -3,6 +3,7 @@ package guidemo;
 import java.time.LocalDate;
 import java.time.Period;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 
 /**
  *
@@ -11,13 +12,32 @@ import javafx.beans.property.SimpleStringProperty;
 public class Person {
     private SimpleStringProperty firstName, lastName;
     private LocalDate birthday;
+    private Image photo;
 
     public Person(String firstName, String lastName, LocalDate birthday) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.birthday = birthday;
+        photo = new Image("defaultImage.png");
+    }
+    
+    public Person(String firstName, String lastName, LocalDate birthday, Image photo) {
+        this.firstName = new SimpleStringProperty(firstName);
+        this.lastName = new SimpleStringProperty(lastName);
+        this.birthday = birthday;
+        this.photo = photo;
+    }
+    
+    public Image getImage()
+    {
+        return photo;
     }
 
+    public void setImage(Image newPicture)
+    {
+        this.photo = newPicture;
+    }
+    
     public String getFirstName() {
         return firstName.get();
     }

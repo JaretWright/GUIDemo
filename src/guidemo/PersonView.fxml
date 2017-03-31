@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="guidemo.PersonViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guidemo.PersonViewController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -71,6 +71,7 @@
                   </Label>
                </children>
             </GridPane>
+            <ImageView fx:id="photo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </VBox>
       <Button layoutX="621.0" layoutY="516.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Back" />
